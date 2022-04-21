@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MireaMarket</string>
+    <string name="app1">MIREA</string>
+    <string name="app2">market</string>
+    <string name="btn1">Регистрация</string>
+    <string name="btn2">Вход</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

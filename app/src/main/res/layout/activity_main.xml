@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColor"
+    android:id="@+id/rootElement"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/app1"
+            android:textAlignment="center"
+            android:textColor="@color/Mirea"
+            android:textSize="70sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-39dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/app2"
+            android:textAlignment="center"
+            android:textColor="@color/market"
+            android:textSize="52sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnReg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/btn_reg"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/btn1"
+            android:textSize="27sp"
+            android:gravity="center"
+            android:textColor="@color/Mirea"
+            app:strokeColor="@color/Mirea" />
+
+
+        <Button
+            android:id="@+id/btnSign"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="150dp"
+            android:background="@drawable/btn_sign"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/btn2"
+            android:gravity="center"
+            android:textSize="27dp"
+            android:textColor="@color/market" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "897603466037",
+    "project_id": "mireamarket-ac48f",
+    "storage_bucket": "mireamarket-ac48f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897603466037:android:c850e115b6521ba667927c",
+        "android_client_info": {
+          "package_name": "com.example.mireamarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897603466037-54vbcrdoq59r4vtjdbasd9mvm81e2t7k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mireamarket",
+            "certificate_hash": "e34caf1d9983ea582a895b4a6e80f19986c32ffd"
+          }
+        },
+        {
+          "client_id": "897603466037-uldcn2pu4d1uhshph19j018abvibd5aq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1lAUDktHc2lmftatgftNCcvhvfTOMVb8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897603466037-uldcn2pu4d1uhshph19j018abvibd5aq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
