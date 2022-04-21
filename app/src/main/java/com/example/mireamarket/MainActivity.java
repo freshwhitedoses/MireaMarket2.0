@@ -29,7 +29,7 @@ Button btnReg,btnSign;
 FirebaseAuth auth;
 FirebaseDatabase db;
 DatabaseReference users;
-RelativeLayout root;
+RelativeLayout   root;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
