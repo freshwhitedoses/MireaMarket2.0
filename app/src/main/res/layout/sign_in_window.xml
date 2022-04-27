@@ -47,8 +47,11 @@
             app:met_primaryColor="#982360"
             app:met_singleLineEllipsis="true" />
 
-
-
+        <Button
+            android:id="@+id/button_remember"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Запомнить меня" />
 
 
     </LinearLayout>
