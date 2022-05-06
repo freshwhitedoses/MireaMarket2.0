@@ -1,31 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.notifications.NotificationsFragment">
+    tools:context=".ui.notifications.NotificationsFragment"
+    >
 
-    <TextView
-        android:id="@+id/text_notifications"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_account"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/Mirea">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/close_account_tw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Закрыть"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/save_account_tw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Сохранить"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:textStyle="bold"
+                    />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/account_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/app_bar_account"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_baseline_person_24" />
+
+    <EditText
+        android:id="@+id/fill_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/account_image"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/account_btn"
+        android:hint="Ваше имя"
+        android:textColorHint="@color/black"
+        android:minHeight="48dp"
+        android:padding="10dp" />
 
-    <Button
-        android:id="@+id/logout"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/fill_surname"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Выйти"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_below="@id/fill_name"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/account_btn"
+        android:hint="Ваша фамилия"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/fill_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fill_surname"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/account_btn"
+        android:hint="Ваша группа"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColorHint="@color/black" />
+</RelativeLayout>
