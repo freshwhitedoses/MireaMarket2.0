@@ -52,48 +52,11 @@ public class NotificationsFragment extends Fragment {
         saveProfile=root.findViewById(R.id.save_account_tw);
         closeProfile=root.findViewById(R.id.close_account_tw);
 
-        saveProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(checker.equals("clicked")){
-                    return;
-                }
-                else{
-                    updateOnlyUserInfo();
-                }
-            }
-        });
-
-        profileImView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                checker="clicked";
-                CropImage.activity(imageUri)
-                    .setAspectRatio(1,1)
-                        .start(new SecondActivity());
-
-
-            }
-        });
-
-
-
-
 
         return root;
 
 
     }
-
-    private void updateOnlyUserInfo() {
-        DatabaseReference ref=FirebaseDatabase.getInstance().getReference().child("Users");
-        HashMap<String,Object> usermap=new HashMap<>();
-        usermap.put("name",name.getText().toString());
-        usermap.put("surname",surname.getText().toString());
-        usermap.put("group",group.getText().toString());
-        ref.child(new)
-    }
-
 
     @Override
     public void onDestroyView() {

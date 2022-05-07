@@ -26,21 +26,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
+                    android:fontFamily="@font/montserrat"
                     android:text="Закрыть"
                     android:textColor="@color/white"
                     android:textSize="17sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/save_account_tw"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/montserrat"
                     android:text="Сохранить"
                     android:textColor="@color/white"
                     android:textSize="17sp"
-                    android:layout_marginRight="15dp"
-                    android:layout_alignParentEnd="true"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
@@ -63,10 +65,11 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/account_btn"
+        android:fontFamily="sans-serif-light"
         android:hint="Ваше имя"
-        android:textColorHint="@color/black"
         android:minHeight="48dp"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/fill_surname"
@@ -77,6 +80,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/account_btn"
+        android:fontFamily="sans-serif-light"
         android:hint="Ваша фамилия"
         android:minHeight="48dp"
         android:padding="10dp"
@@ -91,6 +95,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/account_btn"
+        android:fontFamily="sans-serif-light"
         android:hint="Ваша группа"
         android:minHeight="48dp"
         android:padding="10dp"

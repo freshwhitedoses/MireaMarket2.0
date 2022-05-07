@@ -23,7 +23,7 @@
             android:text="@string/app1"
             android:textAlignment="center"
             android:textColor="@color/Mirea"
-            android:textSize="70sp" />
+            android:textSize="100sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
             android:text="@string/app2"
             android:textAlignment="center"
             android:textColor="@color/market"
-            android:textSize="52sp" />
+            android:textSize="70sp" />
     </LinearLayout>
 
     <LinearLayout
