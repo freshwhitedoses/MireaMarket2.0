@@ -9,6 +9,8 @@ public class MenuItem {
     String img, tittle, price;
     FunctionInterface onClickListener;
 
+    public MenuItem() {}
+
     public MenuItem(int id, String img, String tittle, String price, int category, FunctionInterface onClickListener) {
         this.id = id;
         this.img = img;

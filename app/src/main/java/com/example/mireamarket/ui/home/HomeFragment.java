@@ -1,14 +1,21 @@
 package com.example.mireamarket.ui.home;
 
+import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -22,12 +29,23 @@ import com.example.mireamarket.model.Order;
 import com.example.mireamarket.ui.dashboard.DashboardFragment;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
+
+    List<String> menusTittle=new ArrayList<>();
+    List<String> menusPrice = new ArrayList<>();
+    List<String> menusPriceOfficial = new ArrayList<>();
+
+    TextView txtTotal;
+
+    TableLayout tableLayout;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -38,14 +56,132 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        ListView order_list = root.findViewById(R.id.orders_list);
+        txtTotal = root.findViewById(R.id.txtTotal);
+        tableLayout = root.findViewById(R.id.order_table);
+        createTableOrder();
+
+
+
+        /*ListView order_list = root.findViewById(R.id.orders_list);
         List<String> menusTittle=new ArrayList<>();
         for(MenuItem m: DashboardFragment.FullMenuList){
             if(Order.itemsId.contains(m.getId())) menusTittle.add(m.getTittle());
         }
         System.out.println("Order "+menusTittle.toString());
-        order_list.setAdapter(new ArrayAdapter<>(this.getContext(),R.layout.list_item, menusTittle));
+        order_list.setAdapter(new ArrayAdapter<>(this.getContext(),R.layout.list_item, menusTittle));*/
+
         return root;
+    }
+
+    private void createTableOrder() {
+
+        for(MenuItem m: DashboardFragment.FullMenuList){
+            if(Order.itemsId.contains(m.getId())) {
+                menusPrice.add(m.getPrice());
+                menusPriceOfficial.add(m.getPrice());
+                menusTittle.add(m.getTittle());
+            }
+        }
+
+        int ROWS = menusTittle.size();
+        int COLUMNS = 5;
+
+        for (int i = 0; i < ROWS; i++) {
+
+            TableRow tableRow = new TableRow(getActivity());
+            tableRow.setLayoutParams(new TableLayout.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
+                    TableLayout.LayoutParams.WRAP_CONTENT));
+            tableRow.setGravity(Gravity.CENTER);
+            tableRow.setPadding(0,16,0,0);
+
+            for (int j = 0; j < COLUMNS; j++) {
+                TextView textView = new TextView(this.getContext());
+                if (j == 0) {
+                    textView.setText(menusTittle.get(i));
+                    textView.setTextSize(16);
+                }
+                else if (j == 1) {
+                    textView.setText((Integer.parseInt(menusPriceOfficial.get(i))*
+                            (Integer.parseInt(Order.count.get(i))))+" руб.");
+                    textView.setTextSize(20);
+                    //Order.total += (Integer.parseInt(menusPriceOfficial.get(i))*
+                            //(Integer.parseInt(Order.count.get(i))));
+                }
+                else if (j == 2) {
+                    textView.setText(" - ");
+                    textView.setTextSize(20);
+                    textView.setBackgroundResource(R.drawable.btn_plus);
+                }
+                else if (j == 3) {
+                    textView.setText(Order.count.get(i));
+                    textView.setTextSize(20);
+                }
+                else {
+                    textView.setText(" + ");
+                    textView.setTextSize(20);
+                    textView.setBackgroundResource(R.drawable.btn_plus);
+                }
+                textView.setTextColor(Color.BLACK);
+                textView.setGravity(Gravity.CENTER);
+                textView.setPadding(16, 0, 16, 0);
+
+                textView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        TableRow tr = (TableRow) ((TextView) v).getParent();
+                        int index = tableLayout.indexOfChild(tr);
+
+                        if (((TextView) v).getText().equals(" + ")) {
+                            Order.count.set(index, (Integer.parseInt(Order.count.get(index))+1)+"");
+                            menusPrice.set(index, (Integer.parseInt(menusPriceOfficial.get(index))*
+                                    (Integer.parseInt(Order.count.get(index))))+"");
+                            ((TextView) tr.getVirtualChildAt(3)).setText(Order.count.get(index));
+                            ((TextView) tr.getVirtualChildAt(1)).setText(menusPrice.get(index)+" руб.");
+                            Order.total += Integer.parseInt(menusPriceOfficial.get(index));
+
+                        }
+                        else if (((TextView) v).getText().equals(" - ")) {
+
+                            if (Order.count.get(index).equals("1")){
+                                Order.total -= Integer.parseInt(menusPriceOfficial.get(index));
+                                Order.itemsId.remove(index);
+                                tableLayout.removeViewAt(index);
+                                Order.count.remove(index);
+                                menusPrice.remove(index);
+                                menusPriceOfficial.remove(index);
+                                menusTittle.remove(index);
+                            }
+
+                            else if (Order.count.get(index) != "1"){
+                                Order.count.set(index, (Integer.parseInt(Order.count.get(index))-1)+"");
+                                menusPrice.set(index, (Integer.parseInt(menusPriceOfficial.get(index))*
+                                        Integer.parseInt(Order.count.get(index)))+"");
+                                ((TextView) tr.getVirtualChildAt(3)).setText(Order.count.get(index));
+                                ((TextView) tr.getVirtualChildAt(1)).setText(menusPrice.get(index)+" руб.");
+                                Order.total -= Integer.parseInt(menusPriceOfficial.get(index));
+                            }
+
+                        }
+                        totalPrice();
+                    }
+                });
+
+                tableRow.addView(textView, j);
+            }
+
+            tableLayout.addView(tableRow, i);
+        }
+        totalPrice();
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void totalPrice() {
+        if (Order.total == 0) {
+            for (int i = 0; i < menusPrice.size(); i++) {
+                Order.total += Integer.parseInt(menusPrice.get(i));
+            }
+        }
+        txtTotal.setText("К оплате: " + Order.total + " руб.");
     }
 
     @Override
