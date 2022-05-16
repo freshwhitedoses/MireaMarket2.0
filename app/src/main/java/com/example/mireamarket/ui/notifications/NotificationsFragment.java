@@ -43,7 +43,7 @@ public class NotificationsFragment extends Fragment {
         private NotificationsViewModel notificationsViewModel;
     private FragmentNotificationsBinding binding;
     private String checker="";
-    private Uri imageUri;
+    private Uri  imageUri;
     private CircleImageView profileImView;
     private EditText name, surname, group;
     private TextView saveProfile, closeProfile;
