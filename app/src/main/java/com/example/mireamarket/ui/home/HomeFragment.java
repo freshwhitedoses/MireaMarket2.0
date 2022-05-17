@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -47,6 +48,8 @@ public class HomeFragment extends Fragment {
 
     TableLayout tableLayout;
 
+    Button btnOrder;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -55,6 +58,8 @@ public class HomeFragment extends Fragment {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+        btnOrder = root.findViewById(R.id.buttonOrder);
 
         txtTotal = root.findViewById(R.id.txtTotal);
         tableLayout = root.findViewById(R.id.order_table);

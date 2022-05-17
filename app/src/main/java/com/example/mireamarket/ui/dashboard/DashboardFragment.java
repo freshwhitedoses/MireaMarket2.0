@@ -168,7 +168,7 @@ public class DashboardFragment extends Fragment {
                 food.setTittle(cursor.getString(cursor.getColumnIndex(FoodContract.QuestionTable.NAME)));
                 food.setPrice(cursor.getString(cursor.getColumnIndex(FoodContract.QuestionTable.PRICE)));
                 food.setCategory(cursor.getInt(cursor.getColumnIndex(FoodContract.QuestionTable.CATEGORY)));
-                food.setImg("baget");
+                food.setImg(getImg(food.getId()));
                 food.setOnClickListener(click);
 
                 foodList.add(food);
@@ -177,6 +177,38 @@ public class DashboardFragment extends Fragment {
         }
         cursor.close();
         return foodList;
+    }
+/*menuList.add(new MenuItem(1,"baget", "Багет с светчиной и\nсыром", "170P", 1,click));
+        menuList.add(new MenuItem(2,"kosichka", "Косичка с ветчиной\nи сыром", "150P",1,click));
+        menuList.add(new MenuItem(3,"ylitka", "Улитка с творогом", "60P",1,click));
+        menuList.add(new MenuItem(4,"bar", "Здоровый перекус с\nклубникой", "55P",2,click));
+        menuList.add(new MenuItem(5,"hotdog2", "Французский хот-дог", "180P",1,click));
+        menuList.add(new MenuItem(6,"hotdog1", "Датский хот-дог", "150P",1,click));
+        menuList.add(new MenuItem(7,"voda", "Вод без газа", "65P",3,click));
+        menuList.add(new MenuItem(8,"cola", "Coca-Cola", "70Р",3,click));*/
+    private static String getImg(int id) {
+
+        switch (id){
+            case 1:
+                return "baget";
+            case 2:
+                return "kosichka";
+            case 3:
+                return "ylitka";
+            case 4:
+                return "bar";
+            case 5:
+                return "hotdog2";
+            case 6:
+                return "hotdog1";
+            case 7:
+                return "voda";
+            case 8:
+                return "cola";
+            default:
+                return "baget";
+        }
+
     }
 
     @SuppressLint("Range")
@@ -197,7 +229,7 @@ public class DashboardFragment extends Fragment {
                 food.setTittle(cursor.getString(cursor.getColumnIndex(FoodContract.QuestionTable.NAME)));
                 food.setPrice(cursor.getString(cursor.getColumnIndex(FoodContract.QuestionTable.PRICE)));
                 food.setCategory(cursor.getInt(cursor.getColumnIndex(FoodContract.QuestionTable.CATEGORY)));
-                food.setImg("baget");
+                food.setImg(getImg(food.getId()));
                 food.setOnClickListener(click);
 
                 foodList.add(food);

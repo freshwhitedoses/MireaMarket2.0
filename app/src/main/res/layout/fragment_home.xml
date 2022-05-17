@@ -64,13 +64,14 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
+        android:text="К оплате: "
+        app:layout_constraintBottom_toBottomOf="@+id/buttonOrder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/order_view" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Оформить заказ"
