@@ -13,10 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/Mirea">
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -37,6 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginRight="15dp"
                     android:fontFamily="@font/montserrat"
                     android:text="Сохранить"
@@ -69,6 +72,7 @@
         android:hint="Ваше имя"
         android:minHeight="48dp"
         android:padding="10dp"
+        android:textColor="@color/black"
         android:textColorHint="@color/black" />
 
     <EditText
@@ -77,13 +81,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/fill_name"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/account_btn"
         android:fontFamily="sans-serif-light"
         android:hint="Ваша фамилия"
         android:minHeight="48dp"
         android:padding="10dp"
+        android:textColor="@color/black"
         android:textColorHint="@color/black" />
 
     <EditText
@@ -99,6 +104,7 @@
         android:hint="Ваша группа"
         android:minHeight="48dp"
         android:padding="10dp"
+        android:textColor="@color/black"
         android:textColorHint="@color/black" />
 
     <Button

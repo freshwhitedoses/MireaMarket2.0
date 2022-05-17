@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
+=======
+>>>>>>> master
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="103dp"
     android:height="45dp"
     android:viewportWidth="103"
     android:viewportHeight="45">
+<<<<<<< HEAD
     <path
         android:pathData="M6,12C6,6.477 10.477,2 16,2H51.5H87C92.523,2 97,6.477 97,12V25C97,30.523 92.523,35 87,35H16C10.477,35 6,30.523 6,25V12Z"
         android:fillColor="#ffffff"
@@ -14,3 +18,15 @@
         android:fillColor="#00000000"
         android:strokeColor="#0E5CF3"/>
 </vector>
+=======
+  <path
+      android:pathData="M6,12C6,6.477 10.477,2 16,2H51.5H87C92.523,2 97,6.477 97,12V25C97,30.523 92.523,35 87,35H16C10.477,35 6,30.523 6,25V12Z"
+      android:fillColor="#ffffff"
+      android:fillAlpha="0.3"/>
+  <path
+      android:pathData="M6,12C6,6.477 10.477,2 16,2H51.5H87C92.523,2 97,6.477 97,12V25C97,30.523 92.523,35 87,35H16C10.477,35 6,30.523 6,25V12Z"
+      android:strokeWidth="3"
+      android:fillColor="#00000000"
+      android:strokeColor="#0E5CF3"/>
+</vector>
+>>>>>>> master

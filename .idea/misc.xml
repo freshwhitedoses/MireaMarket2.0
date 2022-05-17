@@ -19,7 +19,14 @@
         <entry key="..\:/Users/Zerocool/AndroidStudioProjects/MireaMarket/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Zerocool/AndroidStudioProjects/MireaMarket/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.15833333333333333" />
         <entry key="..\:/Users/Zerocool/AndroidStudioProjects/MireaMarket/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.15833333333333333" />
+<<<<<<< HEAD
         <entry key="..\:/Users/ekate/AndroidStudioProjects/MireaMarket2.0/app/src/main/res/drawable/account_btn.xml" value="0.26666666666666666" />
+=======
+        <entry key="..\:/Users/Zerocool/AndroidStudioProjects/MireaMarket2.0/app/src/main/res/layout/activity_main.xml" value="0.26358695652173914" />
+        <entry key="..\:/Users/Zerocool/AndroidStudioProjects/MireaMarket2.0/app/src/main/res/layout/fragment_dashboard.xml" value="0.26358695652173914" />
+        <entry key="..\:/Users/Zerocool/AndroidStudioProjects/MireaMarket2.0/app/src/main/res/layout/fragment_home.xml" value="0.26358695652173914" />
+        <entry key="..\:/Users/Zerocool/AndroidStudioProjects/MireaMarket2.0/app/src/main/res/layout/fragment_notifications.xml" value="0.26358695652173914" />
+>>>>>>> master
         <entry key="..\:/Users/ekate/AndroidStudioProjects/MireaMarket2.0/app/src/main/res/drawable/btn_plus.xml" value="0.14427083333333332" />
         <entry key="..\:/Users/ekate/AndroidStudioProjects/MireaMarket2.0/app/src/main/res/drawable/btn_reg.xml" value="0.26666666666666666" />
         <entry key="..\:/Users/ekate/AndroidStudioProjects/MireaMarket2.0/app/src/main/res/drawable/btn_sign.xml" value="0.26666666666666666" />
