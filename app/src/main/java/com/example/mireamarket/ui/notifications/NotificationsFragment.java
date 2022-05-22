@@ -45,7 +45,6 @@ public class NotificationsFragment extends Fragment {
     private String checker="";
     private Uri  imageUri;
     private EditText name, surname, group;
-    private TextView saveProfile, closeProfile;
     Button logout;
     private static User user;
     SharedPreferences sharedPreferences;
