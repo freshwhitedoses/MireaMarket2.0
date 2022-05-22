@@ -60,7 +60,6 @@ public class NotificationsFragment extends Fragment {
         name=root.findViewById(R.id.fill_name);
         surname=root.findViewById(R.id.fill_surname);
         group=root.findViewById(R.id.fill_group);
-        saveProfile=root.findViewById(R.id.save_account_tw);
         logout = root.findViewById(R.id.btnLogout);
 
         sharedPreferences = getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
