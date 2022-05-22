@@ -44,7 +44,6 @@ public class NotificationsFragment extends Fragment {
     private FragmentNotificationsBinding binding;
     private String checker="";
     private Uri  imageUri;
-    private CircleImageView profileImView;
     private EditText name, surname, group;
     private TextView saveProfile, closeProfile;
     Button logout;
@@ -58,7 +57,6 @@ public class NotificationsFragment extends Fragment {
 
         binding = FragmentNotificationsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        profileImView=root.findViewById(R.id.account_image);
         name=root.findViewById(R.id.fill_name);
         surname=root.findViewById(R.id.fill_surname);
         group=root.findViewById(R.id.fill_group);

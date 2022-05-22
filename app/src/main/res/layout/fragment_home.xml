@@ -32,26 +32,27 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0" >
+        app:layout_constraintVertical_bias="0.0">
 
     </ListView>
 
     <ScrollView
         android:id="@+id/order_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="409dp"
+        android:layout_height="381dp"
         android:layout_marginTop="70dp"
-        android:layout_marginBottom="140dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="94dp"
+        app:layout_constraintBottom_toTopOf="@+id/radioButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck">
 
         <TableLayout
             android:id="@+id/order_table"
-            android:gravity="center"
-            android:padding="16dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp" />
 
     </ScrollView>
 
@@ -61,23 +62,54 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="50dp"
+        android:text="К оплате: "
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:text="К оплате: "
         app:layout_constraintBottom_toBottomOf="@+id/buttonOrder"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/order_view" />
+        app:layout_constraintTop_toBottomOf="@+id/order_view"
+        app:layout_constraintVertical_bias="0.706" />
 
     <Button
         android:id="@+id/buttonOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Оформить заказ"
         android:backgroundTint="@color/market"
+        android:text="Оформить заказ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/orders_list" />
+        app:layout_constraintTop_toBottomOf="@+id/orders_list"
+        app:layout_constraintVertical_bias="0.544" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Mirea"
+        android:minHeight="48dp"
+        android:text="По карте"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/Mirea"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.214"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/radioButton2" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:minHeight="48dp"
+        android:text="Наличными"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/Mirea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/radioButton"
+        app:layout_constraintTop_toBottomOf="@+id/buttonOrder" />
 </androidx.constraintlayout.widget.ConstraintLayout>
