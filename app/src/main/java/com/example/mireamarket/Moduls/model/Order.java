@@ -1,4 +1,4 @@
-package com.example.mireamarket.model;
+package com.example.mireamarket.Moduls.model;
 
 import java.util.ArrayList;
 import java.util.List;

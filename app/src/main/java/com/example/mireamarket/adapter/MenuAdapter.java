@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mireamarket.R;
-import com.example.mireamarket.model.MenuItem;
+import com.example.mireamarket.Moduls.model.MenuItem;
 
 import java.util.List;
 

@@ -1,41 +1,36 @@
 package com.example.mireamarket.ui.home;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.mireamarket.MainQr;
 import com.example.mireamarket.R;
+import com.example.mireamarket.SecondActivity;
 import com.example.mireamarket.databinding.FragmentHomeBinding;
-import com.example.mireamarket.model.MenuItem;
-import com.example.mireamarket.model.Order;
+import com.example.mireamarket.Moduls.model.MenuItem;
+import com.example.mireamarket.Moduls.model.Order;
 import com.example.mireamarket.ui.dashboard.DashboardFragment;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 public class HomeFragment extends Fragment {
+    private Context sampleActivityContext;
 
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
@@ -53,6 +48,7 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        sampleActivityContext=this.getActivity();
         homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
 
@@ -64,16 +60,14 @@ public class HomeFragment extends Fragment {
         txtTotal = root.findViewById(R.id.txtTotal);
         tableLayout = root.findViewById(R.id.order_table);
         createTableOrder();
+        btnOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(sampleActivityContext,MainQr.class);
 
-
-
-        /*ListView order_list = root.findViewById(R.id.orders_list);
-        List<String> menusTittle=new ArrayList<>();
-        for(MenuItem m: DashboardFragment.FullMenuList){
-            if(Order.itemsId.contains(m.getId())) menusTittle.add(m.getTittle());
-        }
-        System.out.println("Order "+menusTittle.toString());
-        order_list.setAdapter(new ArrayAdapter<>(this.getContext(),R.layout.list_item, menusTittle));*/
+                startActivity(intent);
+            }
+        });
 
         return root;
     }

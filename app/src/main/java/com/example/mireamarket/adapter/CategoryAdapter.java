@@ -10,8 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mireamarket.R;
-import com.example.mireamarket.SecondActivity;
-import com.example.mireamarket.model.Category;
+import com.example.mireamarket.Moduls.model.Category;
 import com.example.mireamarket.ui.dashboard.DashboardFragment;
 
 import java.util.List;

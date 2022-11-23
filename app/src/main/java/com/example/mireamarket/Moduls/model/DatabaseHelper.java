@@ -1,4 +1,4 @@
-package com.example.mireamarket.model;
+package com.example.mireamarket.Moduls.model;
 
 import android.content.Context;
 import android.database.SQLException;

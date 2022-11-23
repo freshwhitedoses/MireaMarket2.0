@@ -22,11 +22,11 @@ import com.example.mireamarket.R;
 import com.example.mireamarket.adapter.CategoryAdapter;
 import com.example.mireamarket.adapter.MenuAdapter;
 import com.example.mireamarket.databinding.FragmentDashboardBinding;
-import com.example.mireamarket.model.Category;
-import com.example.mireamarket.model.DatabaseHelper;
-import com.example.mireamarket.model.FoodContract;
-import com.example.mireamarket.model.MenuItem;
-import com.example.mireamarket.model.Order;
+import com.example.mireamarket.Moduls.model.Category;
+import com.example.mireamarket.Moduls.model.DatabaseHelper;
+import com.example.mireamarket.Moduls.model.FoodContract;
+import com.example.mireamarket.Moduls.model.MenuItem;
+import com.example.mireamarket.Moduls.model.Order;
 
 import java.io.IOException;
 import java.util.ArrayList;
